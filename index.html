@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MD Calls - Layanan Kesehatan</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome untuk ikon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Mencegah scrolling horizontal */
+        }
+        /* Custom styles for image overlay */
+        .hero-image-overlay {
+            position: relative;
+            z-index: 1;
+        }
+        .hero-image-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+            z-index: 2;
+        }
+        @media (max-width: 768px) {
+            .hero-image-overlay::before {
+                background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 50%, rgba(255,255,255,0) 100%);
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow-sm py-4">
+        <nav class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="flex items-center space-x-2">
+                <!-- Logo MD Calls, warna latar belakang diubah menjadi merah #dd4b39 -->
+                <img src="https://placehold.co/40x40/dd4b39/ffffff?text=MD" alt="MD Calls Logo" class="rounded-full">
+                <span class="text-2xl font-bold text-gray-800">Calls</span>
+            </a>
+            <div class="hidden md:flex space-x-6 items-center">
+                <a href="#home" class="text-gray-600 hover:text-[#dd4b39] transition duration-300">Home</a>
+                <!-- Mengubah Department menjadi Services dan menghilangkan Blog menu dropdown -->
+                <a href="#services" class="text-gray-600 hover:text-[#dd4b39] transition duration-300">Services</a>
+                <!-- Menghilangkan menu dropdown Pages, hanya menjadi link langsung -->
+                <a href="#pages" class="text-gray-600 hover:text-[#dd4b39] transition duration-300">Pages</a>
+                <a href="#doctors" class="text-gray-600 hover:text-[#dd4b39] transition duration-300">Doctors</a>
+                <a href="#contact" class="text-gray-600 hover:text-[#dd4b39] transition duration-300">Contact</a>
+                <!-- Tombol Login dengan warna merah #dd4b39 -->
+                <a href="index.php" class="bg-[#dd4b39] text-white px-6 py-2 rounded-md hover:bg-[#c23d31] transition duration-300 shadow-md">Login</a>
+          <button class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative bg-gray-100 py-20 overflow-hidden" id="home">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between relative z-10">
+            <div class="md:w-1/2 text-center md:text-left mb-10 md:mb-0 relative z-20">
+                <h1 class="text-5xl md:text-6xl font-extrabold text-gray-900 leading-tight mb-4">
+                    Utamakan Kesehatan dan <br>Keselamatan Kerja
+                </h1>
+                <p class="text-lg text-gray-600 mb-8 max-w-lg mx-auto md:mx-0">
+                    Kesehatan dan Keselamatan Kerja (K3) di tempat kerja merupakan tanggung jawab
+                    bersama. Dengan saling menunaikan kewajiban di tempat kerja, maka diharapkan penerapan K3
+                    dapat dilaksanakan dengan baik.
+                </p>
+                <!-- Tombol "Check Our Services" dengan warna merah #dd4b39 -->
+                <a href="#" class="bg-[#dd4b39] text-white px-8 py-3 rounded-md text-lg font-semibold hover:bg-[#c23d31] transition duration-300 shadow-lg inline-block">Layanan Kami</a>
+            </div>
+            <div class="md:w-1/3,5 flex justify-center md:justify-end relative hero-image-overlay">
+                <!-- Gambar k3.jpg -->
+                <img src="k3.jpg" alt="Kesehatan dan Keselamatan Kerja" class="w-full max-w-md md:max-w-xl rounded-lg shadow-xl relative z-10">
+            </div>
+        </div>
+    </section>
+
+    <!-- Service Cards Section -->
+    <section class="bg-red-50 py-16" id="services">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Card 1: Pelayanan Umum -->
+            <div class="bg-[#dd4b39] text-white p-8 rounded-lg shadow-lg text-center flex flex-col items-center">
+                <div class="mb-4 text-5xl">
+                    <i class="fas fa-hospital-alt"></i> <!-- Icon untuk Pelayanan Umum -->
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Pelayanan Umum</h3>
+                <p class="text-red-100 mb-6">Layanan medis komprehensif untuk mendukung kesehatan karyawan di lingkungan kerja Anda.</p>
+                 </div>
+
+            <!-- Card 2: Penanganan Darurat -->
+            <div class="bg-[#dd4b39] text-white p-8 rounded-lg shadow-lg text-center flex flex-col items-center">
+                <div class="mb-4 text-5xl">
+                    <i class="fas fa-phone-volume"></i> <!-- Icon untuk Penanganan Darurat -->
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Penanganan Darurat</h3>
+                <p class="text-red-100 mb-6">Respons cepat dan efektif untuk situasi medis darurat di tempat kerja.</p>
+                </div>
+
+            <!-- Card 3: Konsultasi On-Site -->
+            <div class="bg-[#dd4b39] text-white p-8 rounded-lg shadow-lg text-center flex flex-col items-center">
+                <div class="mb-4 text-5xl">
+                    <i class="fas fa-briefcase-medical"></i> <!-- Icon untuk Konsultasi On-Site -->
+                </div>
+                <h3 class="text-2xl font-semibold mb-4">Konsultasi On-Site</h3>
+                <p class="text-red-100 mb-6">Layanan konsultasi dan pemeriksaan kesehatan langsung di lokasi kerja Anda.</p>
+               </div>
+        </div>
+    </section>
+
+    <!-- Welcome to MD Calls Section -->
+    <section class="py-16 bg-white" id="pages">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between gap-12">
+            <div class="md:w-1/2 relative">
+                <!-- Gambar dokterkerja.jpg -->
+                <img src="dokterkerja.jpg" alt="Pemeriksaan Medis di Tempat Kerja" class="w-full rounded-lg shadow-lg">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <!-- Teks diubah di sini -->
+                <p class="text-[#dd4b39] text-lg font-semibold mb-2">Selamat Datang di MD Calls</p>
+                <h2 class="text-4xl font-bold text-gray-900 mb-6">Kesehatan Kerja Optimal, Perawatan Medis Profesional</h2>
+                <p class="text-gray-600 mb-6">
+                    MD Calls berdedikasi untuk menyediakan akses cepat dan terpercaya ke layanan medis ahli, memastikan kesehatan dan keselamatan kerja yang komprehensif bagi tim Anda. Kami memahami bahwa lingkungan kerja yang sehat adalah kunci produktivitas dan kesejahteraan.
+                </p>
+                <ul class="text-gray-700 space-y-3 mb-8 text-left inline-block md:block">
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#dd4b39] mr-3"></i> Akses mudah ke konsultasi dokter ahli.</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#dd4b39] mr-3"></i> Respon cepat untuk keadaan darurat medis.</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#dd4b39] mr-3"></i> Edukasi dan pencegahan risiko kesehatan di tempat kerja.</li>
+                    <li class="flex items-center"><i class="fas fa-check-circle text-[#dd4b39] mr-3"></i> Dukungan medis terpadu untuk karyawan Anda.</li>
+                </ul>
+</div>
+        </div>
+    </section>
+
+    <!-- Testimonial Section -->
+    <section class="py-16 bg-red-50" id="doctors">
+        <div class="container mx-auto px-4 text-center">
+            <div class="relative max-w-3xl mx-auto bg-white p-10 rounded-lg shadow-xl">
+                <!-- Ikon kutipan dengan warna merah #dd4b39 -->
+                <div class="text-[#dd4b39] text-6xl mb-6">
+                    <i class="fas fa-quote-right"></i>
+                </div>
+                <p class="text-gray-700 text-lg md:text-xl leading-relaxed mb-8">
+                    "Keselamatan adalah fondasi di mana produktivitas sejati dibangun. Ketika setiap pekerja merasa aman, terlindungi, dan dihargai, mereka akan melakukan pekerjaan terbaiknya. Menjaga kesehatan dan keselamatan di tempat
+                    kerja bukan hanya kewajiban hukum, tetapi juga cerminan nyata dari kepedulian terhadap sumber daya terpenting perusahaan: karyawannya."
+                </p>
+                <p class="text-gray-900 font-semibold text-lg">Filosofi Keselamatan dan Kesehatan Kerja</p>
+                <!-- Background image of a patient smiling -->
+                <div class="absolute inset-0 bg-cover bg-center opacity-10 rounded-lg -z-10" style="background-image: url('https://placehold.co/1200x600/f0f0f0/333333?text=Smiling+Patient');"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expert Doctors Section -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-gray-900 text-center mb-12">Dokter Spesialis Kami</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+                <!-- Doctor Card 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <!-- Gambar dokter1.jpg -->
+                    <img src="dokter1.jpg" alt="dr. Salwa Zahida, Sp.OT." class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900">dr. Salwa Zahida, Sp.OT.</h3>
+                    <p class="text-gray-600">Spesialis Ortopedi</p>
+                </div>
+                <!-- Doctor Card 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <!-- Gambar dokter2.jpg -->
+                    <img src="dokter2.jpg" alt="dr. Budi Prasetyo, Sp.JP." class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900">dr. Budi Prasetyo, Sp.JP.</h3>
+                    <p class="text-gray-600">Spesialis Jantung dan Paru Paru</p>
+                </div>
+                <!-- Doctor Card 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <!-- Gambar dokter3.jpg -->
+                    <img src="dokter3.jpg" alt="dr. Cinta Hati, Sp. PD." class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900">dr. Cinta Hati, Sp. PD.</h3>
+                    <p class="text-gray-600">Spesialis Penyakit Dalam</p>
+                </div>
+                <!-- Doctor Card 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <!-- Gambar dokter4.jpg -->
+                    <img src="dokter4.jpg" alt="dr. Andi Eka, Sp. THT" class="w-32 h-32 mx-auto rounded-full mb-4 object-cover">
+                    <h3 class="text-xl font-semibold text-gray-900">dr. Andi Eka, Sp. THT</h3>
+                    <p class="text-gray-600">Spesialis Telinga, Hidung, dan Tenggorokan</p>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-800 text-gray-300 py-16" id="contact">
+        <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1">
+                <a href="#" class="flex items-center space-x-2 mb-4">
+                    <!-- Logo MD Calls, warna latar belakang diubah menjadi merah #dd4b39 -->
+                    <img src="https://placehold.co/40x40/dd4b39/ffffff?text=MD" class="rounded-full">
+                    <span class="text-2xl font-bold text-white">Calls</span>
+                </a>
+                <p class="text-gray-400 mb-6">Kesehatan Anda, Prioritas Kami.</p>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-xl"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-xl"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white transition duration-300 text-xl"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="col-span-1">
+                <h3 class="text-xl font-semibold text-white mb-4">Departemen</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Ortopedi</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Jantung</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Paru Paru</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Penyakit Dalam</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">THT</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-span-1">
+                <h3 class="text-xl font-semibold text-white mb-4">Alamat</h3>
+                <p class="text-gray-400 mb-2">Jl. Kesehatan No. 123, Batam</p>
+                <p class="text-gray-400 mb-2">mdcalls@gmail.com</p>
+            </div>
+        </div>
+        <div class="container mx-auto px-4 text-center mt-12 border-t border-gray-700 pt-8">
+            <p class="text-gray-500 text-sm">
+                Copyright ©2025 MD Calls All rights reserved 
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>

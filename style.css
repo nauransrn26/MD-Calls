@@ -1,0 +1,285 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 80%;
+  
+    overflow: hidden;
+    padding: 20px 0;
+}
+
+
+header h1 {
+    /* Tidak perlu text-align: center; lagi di sini karena sudah diatur oleh parent flexbox */
+    margin: 0; /* Hapus margin default h1 agar tidak mengganggu penengahan */
+}
+
+header {
+    background: #0056b3; /* Warna biru gelap */
+    color: #fff;
+    padding: 1rem 0;
+    border-bottom: 3px solid #004085;
+}
+
+header .logo h1 {
+    margin: 0;
+    color: #fff;
+    float: left;
+}
+
+header nav {
+    float: center;
+}
+
+header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+header li {
+    display: inline;
+    padding: 0 15px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header a:hover {
+    color: #ddd;
+}
+
+#hero {
+    min-height: 400px;
+    background: #007bff; /* Warna biru cerah */
+    color: #fff;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#hero h2 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.btn {
+    display: inline-block;
+    color: #fff;
+    background: #28a745; /* Warna hijau */
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #218838;
+}
+
+.about-section, .services-section, .facilities-section, .gallery-section, .testimonials-section, .promo-section {
+    padding: 40px 0;
+    text-align: center;
+    background: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+.about-section h2, .services-section h2, .facilities-section h2, .gallery-section h2, .testimonials-section h2, .promo-section h2 {
+    color: #0056b3;
+    margin-bottom: 20px;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.feature-item {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 280px;
+    max-width: 30%;
+}
+
+.package-card {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: left;
+    max-width: 600px;
+}
+
+.package-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.package-card li {
+    margin-bottom: 5px;
+}
+
+.package-card .price {
+    font-size: 1.5em;
+    color: #dc3545; /* Merah */
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.btn-detail {
+    display: inline-block;
+    background: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.facility-item {
+    background: #e9ecef;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonial-card {
+    background: #fff;
+    padding: 20px;
+    margin: 20px auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    max-width: 700px;
+    font-style: italic;
+}
+
+.testimonial-card cite {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.promo-section {
+    background: #28a745; /* Warna hijau */
+    color: #fff;
+    padding: 50px 0;
+}
+
+.promo-section h2 {
+    color: #fff;
+}
+
+footer {
+    background: #343a40; /* Warna abu-abu gelap */
+    color: #fff;
+    padding: 40px 0 20px;
+    text-align: center;
+}
+
+footer .footer-col {
+    width: 23%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 1%;
+    text-align: left;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+footer .copyright {
+    margin-top: 30px;
+    padding-top: 15px;
+    border-top: 1px solid #555;
+    font-size: 0.9em;
+}
+/* Dalam file CSS Anda (misalnya, style.css, adminlte.min.css, atau custom.css) */
+
+/* Menargetkan thead th untuk tabel pertama (jika belum ada) */
+#table thead th {
+    background-color: #dd4b39; /* Warna merah */
+     /* Warna teks putih */
+}
+
+/* Menargetkan thead th untuk tabel kedua (jadwal dokter) */
+#tablejadwal thead th {
+    background-color: #dd4b39; /* Warna merah */
+    /* Warna teks putih */
+}
+
+/* Atau, jika Anda ingin semua thead th di halaman memiliki gaya ini: */
+/* thead th {
+    background-color: #dd4b39;
+    color: white;
+} */
+@media (max-width: 768px) {
+    header .logo, header nav {
+        float: none;
+        text-align: center;
+    }
+    header li {
+        display: block;
+        padding: 5px 0;
+    }
+    .footer-col {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
